@@ -21,11 +21,27 @@ function addBook(library, book) {
 }
 
 function checkoutBook(library, book) {
-  library.shelves.fiction = library.shelves.fiction.filter(checkedOutBook => checkedOutBook.title != book)
+  if (!library.shelves.fiction.includes(book.title) && !library.shelves.nonFiction.includes(book.title) && !library.shelves.fantasy.includes(book.title)) {
+    return `Sorry, there are currently no copies of ${book} available at the Denver Public Library`
+  } else if (library.shelves.fiction.includes(book.title)) {
 
-  library.shelves.nonFiction = library.shelves.nonFiction.filter(checkedOutBook => checkedOutBook.title != book)
+  console.log('hi')
 
-  library.shelves.fantasy = library.shelves.fantasy.filter(checkedOutBook => checkedOutBook.title != book)
+  var currentFictionShelf = library.shelves.fiction.find(checkedOutBook => checkedOutBook.title != book)
+
+  console.log(currentFictionShelf)
+
+  // var currentNonFictionShelf = library.shelves.nonFiction.find(checkedOutBook => checkedOutBook.title != book)
+  //
+  // var currentFantasyShelf = library.shelves.fantasy.find(checkedOutBook => checkedOutBook.title != book)
+
+  return `You have now checked out ${book} from the Denver Public Library`
+  }
+
+  // find gives the first one that matches
+
+//if the title is not in the array return error message
+
 
   // var allShelves = [library.shelves.fantasy, library.shelves.fiction, library.shelves.nonFiction]
 
@@ -38,22 +54,21 @@ function checkoutBook(library, book) {
   // var currentShelf = library.shelves.fiction
   // currentShelf = currentShelf.filter(checkedOutBook => checkedOutBook.title != book)
 
-  return `You have now checked out ${book} from the Denver Public Library`
+
   }
 
+//check to see if the book is on the shelf
+//we can only checkout books that are on the shelf
+//not changing anything except the return message
+//the title "The Fifth Season" which is not currently part of any object
+//The Fifth Season is undefined?
+//maybe a conditional
+//if not on the shelf return "Sorry..."
+//interpolate that return statement
 
 
 
-// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-//
-// const result = words.filter(word => word.length > 6);
 
-
-// expected output: Array ["exuberant", "destruction", "present"]
-//loop through the fiction array and search for the title
-//remove from fiction array using filter
-//remove the book from the fiction array
-//return "You have chec..."
 
 module.exports = {
   createLibrary: createLibrary,

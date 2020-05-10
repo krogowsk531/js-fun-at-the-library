@@ -110,6 +110,7 @@ describe("library.js", function() {
       var denverLibrary = createLibrary("Denver Public Library");
 
       var error = checkoutBook(denverLibrary, "The Fifth Season");
+      
 
       assert.equal(error, "Sorry, there are currently no copies of The Fifth Season available at the Denver Public Library");
     });
