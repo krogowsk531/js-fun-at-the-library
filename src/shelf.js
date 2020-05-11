@@ -1,19 +1,19 @@
 function shelfBook(title, shelf) {
   if (shelf.length < 3) {
-    shelf.unshift(title)
+    shelf.unshift(title);
   }
 }
 
 function unshelfBook(title, shelf) {
   for (var i = 0; i < shelf.length; i++) {
     if (shelf[i].title === title) {
-      shelf.splice(i, 1)
+      shelf.splice(i, 1);
     }
   }
 }
 
 function listTitles(shelf) {
-  var allTitles = []
+  var allTitles = [];
   for (var i = 0; i < shelf.length; i++) {
     allTitles.push(shelf[i].title);
  }

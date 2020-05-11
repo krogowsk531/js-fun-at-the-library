@@ -1,14 +1,13 @@
 function createTitle(title) {
-  return `The ${title}`
+  return `The ${title}`;
 }
 
 function buildMainCharacter(name, age, pronouns) {
-  var charObject = {
+  return {
     name: name,
     age: age,
     pronouns: pronouns,
   }
-  return charObject
 }
 
 function saveReview(review, reviewArray) {
@@ -31,8 +30,8 @@ function writeBook(bookTitle, bookCharacter, genre) {
 }
 
 function editBook(book) {
-  book.pageCount = book.pageCount * .75
-  return book.pageCount
+  book.pageCount = book.pageCount * .75;
+  return book.pageCount;
 }
 
 module.exports = {

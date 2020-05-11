@@ -41,7 +41,7 @@ var isFavorite = false;
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
 
-var isShortStory = (pageCount < 25) ? true : false
+var isShortStory = (pageCount < 25) ? true : false;
 
 
 
@@ -55,7 +55,7 @@ var isShortStory = (pageCount < 25) ? true : false
 if (pages < 1000) {
   console.log('I could read that in a day!');
 } else {
-  console.log('Ok, maybe I could read that in a day and a half!')
+  console.log('Ok, maybe I could read that in a day and a half!');
 }
 
 // Express the following in code: If the variable "isFavorite" is true,
@@ -66,7 +66,7 @@ if (pages < 1000) {
 if (isFavorite === true) {
   console.log(`My favorite book is ${title}!`);
 } else {
-  console.log(`I recently read the ${title} book.`)
+  console.log(`I recently read the ${title} book.`);
 }
 
 
